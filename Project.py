@@ -1,6 +1,6 @@
 from PgLib import *
 
-WIDTH, HEIGHT = 1920, 1080
+WIDTH, HEIGHT = 1280, 720
 GRAVITY = 450
 
 score = 0
@@ -13,7 +13,7 @@ ballVel = vector(random(-150, 150), 1)
 
 # Called once at the start
 def setup():
-    createWindow(WIDTH, HEIGHT, True)
+    createWindow(WIDTH, HEIGHT, False)
     title("Example Bouncy Ball Game")
 
 def updatePlayer():

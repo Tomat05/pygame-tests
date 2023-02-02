@@ -61,4 +61,4 @@ def update():
 
     text(vector(WIDTH/2, 50), f"Score: {score}")
     if lost:
-        text(vector(WIDTH/2, 100), "You Loose, ESC to exit")
+        text(vector(WIDTH/2, 100), "You Lose, ESC to exit")

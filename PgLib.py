@@ -1,5 +1,6 @@
 import pygame
 import random as rndm
+from math import floor
 
 screen = None
 clock = pygame.time.Clock()
@@ -17,12 +18,6 @@ KEYS = {
     "SPACE"        : pygame.K_SPACE,
     "HASHTAG"      : pygame.K_HASH,
     "QUOTE"        : pygame.K_QUOTE,
-    "LEFTPAREN"    : pygame.K_LEFTPAREN,
-    "RIGHTPAREN"   : pygame.K_RIGHTPAREN,
-    "COMMA"        : pygame.K_COMMA,
-    "PERIOD"       : pygame.K_PERIOD,
-    "SLASH"        : pygame.K_SLASH,
-    "0"            : pygame.K_0,
     "1"            : pygame.K_1,
     "2"            : pygame.K_2,
     "3"            : pygame.K_3,
@@ -148,10 +143,10 @@ def colour(red, green, blue, alpha=255):
 # Sprite Stuff
 # ===================================================================
 def circle(position, radius, fill):
-    pygame.draw.circle(screen, fill, (position.x, position.y), radius)
+    pygame.draw.circle(screen, fill, (int(position.x), int(position.y)), radius)
 
 def rect(position, width, height, fill):
-    pygame.draw.rect(screen, fill, (position.x, position.y, width, height))
+    pygame.draw.rect(screen, fill, (int(position.x), int(position.y), width, height))
 # ===================================================================
 # INPUT
 # ===================================================================
